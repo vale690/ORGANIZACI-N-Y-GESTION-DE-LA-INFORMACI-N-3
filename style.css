@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Fondo oscuro degradado azul */
+    color: #f0f0f0; /* Color de texto general blanco */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0d1b26; /* Un azul más oscuro para el encabezado */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #4a90e2; /* Línea inferior azul brillante */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em; /* Título grande */
+    color: #4a90e2; /* Título en azul brillante */
+    text-shadow: 0 0 15px rgba(74, 144, 226, 0.7); /* Sombra para resaltar */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #b0c4de;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.content-left {
+    flex: 2; /* Ocupa más espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-right {
+    flex: 1; /* Ocupa menos espacio, a la derecha */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(23, 40, 52, 0.8); /* Fondo de tarjetas semitransparente oscuro */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(74, 144, 226, 0.3); /* Borde sutil azul */
+}
+
+.card h2 {
+    color: #4a90e2; /* Títulos de sección en azul */
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.5); /* Subrayado azul para títulos */
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    color: #6daee7; /* Subtítulos en un azul más claro */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card p, .card li {
+    color: #f0f0f0; /* Texto de contenido en blanco */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #a0d8f0; /* Labels de formulario en azul claro */
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #4a90e2; /* Borde de inputs en azul */
+    border-radius: 5px;
+    background-color: #1a3240; /* Fondo de inputs oscuro */
+    color: #f0f0f0;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7abaff; /* Borde más claro al enfocar */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+.btn {
+    background-color: #4a90e2; /* Botones en azul vibrante */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #357bd8; /* Azul un poco más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.clear-btn {
+    background-color: #e74c3c; /* Botón de limpiar en rojo */
+}
+
+.clear-btn:hover {
+    background-color: #c0392b;
+}
+
+.export-btn, .import-btn {
+    background-color: #2ecc71; /* Botones de importar/exportar en verde */
+}
+
+.export-btn:hover, .import-btn:hover {
+    background-color: #27ae60;
+}
+
+#document-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#document-table th,
+#document-table td {
+    border: 1px solid #3d6e8e; /* Bordes de tabla en un azul grisáceo */
+    padding: 12px;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+#document-table th {
+    background-color: #1f3745; /* Fondo de encabezado de tabla más oscuro */
+    color: #9ac2e9; /* Texto de encabezado en azul claro */
+    font-weight: bold;
+}
+
+#document-table tbody tr:nth-child(even) {
+    background-color: rgba(31, 55, 69, 0.4); /* Filas pares con un fondo ligeramente diferente */
+}
+
+#document-table tbody tr:hover {
+    background-color: rgba(74, 144, 226, 0.2); /* Resaltar fila al pasar el mouse */
+}
+
+.action-buttons button {
+    background: none;
+    border: none;
+    color: #4a90e2;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    color: #7abaff;
+}
+
+/* Iconos para editar y eliminar (puedes usar Font Awesome o emojis) */
+.edit-icon::before {
+    content: "✏"; /* Emoji de lápiz */
+}
+
+.delete-icon::before {
+    content: "🗑"; /* Emoji de papelera */
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0d1b26;
+    color: #b0c4de;
+    border-top: 2px solid #4a90e2;
+    margin-top: 20px;
+}
+
+footer .credits h3 {
+    margin-top: 0;
+    color: #4a90e2;
+    font-size: 1.5em;
+}
+
+footer .credits p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Gráfico */
+#categoryChart {
+    max-width: 100%;
+    height: auto;
+    background-color: rgba(23, 40, 52, 0.6); /* Fondo del gráfico para que no choque con el fondo principal */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+    main {
+        flex-direction: column;
+    }
+    .content-left, .content-right {
+        flex: none;
+        width: 100%;
+    }
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    .card {
+        padding: 15px;
+    }
+    .card h2 {
+        font-size: 1.5em;
+    }
+    .form-group input, .form-group textarea, .btn {
+        font-size: 0.9em;
+    }
+    #document-table th, #document-table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .action-buttons button {
+        font-size: 1em;
+    }
+    footer {
+        padding: 20px;
+    }
+}
