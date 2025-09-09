@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización y Gestión de la Información</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ORGANIZACIÓN Y GESTIÓN DE LA INFORMACIÓN</h1>
+        <p>CEPRODENT CENTRO DE ESTUDIOS TÉCNICOS CANALETE 2025</p>
+    </header>
+
+    <main>
+        <div class="content-left">
+            <section id="document-form-section" class="card">
+                <h2>Formulario de Documentos</h2>
+                <form id="document-form">
+                    <div class="form-group">
+                        <label for="nombreDocumento">Nombre del Documento:</label>
+                        <input type="text" id="nombreDocumento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoría:</label>
+                        <input type="text" id="categoria" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="etiquetas">Etiquetas (separadas por comas):</label>
+                        <input type="text" id="etiquetas">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Guardar</button>
+                        <button type="button" class="btn clear-btn">Limpiar</button>
+                        <button type="button" class="btn export-btn">Exportar</button>
+                        <input type="file" id="importFile" accept=".json" style="display: none;">
+                        <button type="button" class="btn import-btn">Importar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="document-list-section" class="card">
+                <h2>Lista de Documentos Agregados</h2>
+                <table id="document-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Etiquetas</th>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Documentos se insertarán aquí por JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="guide-section" class="card">
+                <h2>Guía de Uso</h2>
+                <ol>
+                    <li>*Formulario de Documentos:* Rellena los campos con la información del documento (nombre, categoría, etiquetas, fecha y descripción). Todos los campos son obligatorios excepto las etiquetas y la descripción.</li>
+                    <li>*Guardar:* Haz clic en "Guardar" para añadir el documento a la lista. La información se guardará localmente en tu navegador.</li>
+                    <li>*Limpiar:* Este botón borra todos los campos del formulario, preparándolo para un nuevo registro.</li>
+                    <li>*Editar:* En la "Lista de Documentos Agregados", haz clic en el icono de lápiz para rellenar el formulario con los datos del documento seleccionado y poder modificarlos.</li>
+                    <li>*Eliminar:* En la "Lista de Documentos Agregados", haz clic en el icono de papelera para borrar un documento de la lista.</li>
+                    <li>*Exportar:* Genera un archivo JSON con todos los documentos guardados, permitiéndote hacer una copia de seguridad.</li>
+                    <li>*Importar:* Te permite subir un archivo JSON previamente exportado para cargar documentos en el sistema. Ten en cuenta que esto añadirá los documentos existentes en el archivo a tu lista actual.</li>
+                    <li>*Reporte por Categoría:* El gráfico de pastel en el panel derecho te muestra la distribución de tus documentos por categoría, brindando una visión rápida de la organización.</li>
+                    <li>*Créditos:* Los creadores del proyecto se encuentran al final de la página.</li>
+                </ol>
+            </section>
+        </div>
+
+        <div class="content-right">
+            <section id="executive-summary-section" class="card">
+                <h2>Resumen Ejecutivo</h2>
+                <p>La organización y gestión de la información, permite a las empresas y organizaciones a tomar y mejorar decisiones eficientes y así reducir varios riesgos, por lo tanto permite proteger y distribuir datos, identificar o comprender a los clientes de manera precisa, segura y adquirir ventajas competitivas.</p>
+            </section>
+
+            <section id="audience-section" class="card">
+                <h2>¿A quién dirigido?</h2>
+                <p>A los estudiantes y docentes del área Asistente Administrativo.</p>
+            </section>
+
+            <section id="problems-solved-section" class="card">
+                <h2>¿Qué problemas resuelve?</h2>
+                <p>La organización y gestión de la información permite enfrentar y resolver diversos problemas y ayuda a superar la ineficiencia operativa, la duplicidad de esfuerzos y los procesos lentos y ordenar y centralizar la información. Reduce errores e inconsistencias en los datos, asegura la trazabilidad y evita la pérdida del conocimiento organizacional mediante un manejo adecuado de documentos y registros. Además mejora la colaboración y la comunicación protege frente a riesgos de seguridad facilita el cumplimiento normativo y garantiza respaldo y recuperación de la información de esta forma contribuye a eliminar las limitaciones de la toma de decisiones en la organización.</p>
+            </section>
+
+            <section id="expected-benefits-section" class="card">
+                <h2>Beneficios Esperados</h2>
+                <h3>Objetivo General</h3>
+                <p>Implementar un sistema de organización y gestión de la información que permita administrar, almacenar, proteger y recuperar los datos de manera eficiente, garantizando su accesibilidad, confiabilidad y utilidad para la toma de decisiones oportunas.</p>
+                <h3>Objetivos Específicos</h3>
+                <ol>
+                    <li>Diseñar procesos claros para la clasificación, almacenamiento y recuperación de la información.</li>
+                    <li>Optimizar el uso de herramientas tecnológicas que faciliten el manejo de grandes volúmenes de datos.</li>
+                    <li>Garantizar la seguridad y confidencialidad de la información mediante políticas de acceso y protección de datos.</li>
+                    <li>Capacitar al personal en buenas prácticas de gestión documental y uso de sistemas informáticos.</li>
+                    <li>Reducir tiempos de búsqueda y minimizar errores en la manipulación de datos.</li>
+                </ol>
+                <h3>Beneficios Clave</h3>
+                <ul>
+                    <li>Mayor eficiencia en la búsqueda, uso y recuperación de la información.</li>
+                    <li>Mejora en la calidad de las decisiones gracias a datos actualizados y confiables.</li>
+                    <li>Reducción de pérdidas de información y mayor seguridad en su manejo.</li>
+                    <li>Optimización del tiempo y recursos en los procesos administrativos.</li>
+                    <li>Incremento en la productividad y competitividad de la organización.</li>
+                    <li>Facilita la transparencia y el cumplimiento de normativas legales.</li>
+                </ul>
+            </section>
+
+            <section id="scope-section" class="card">
+                <h2>Alcance del Proyecto</h2>
+                <p>El proyecto consiste en diseñar e implementar un sistema de organización y gestión de la información que optimice el flujo de datos en la institución. Incluye la recolección, clasificación, almacenamiento, consulta y resguardo de la información mediante herramientas tecnológicas que garanticen su disponibilidad, seguridad y precisión. También contempla la capacitación del personal y la aplicación de políticas de acceso, con el fin de mejorar la productividad, transparencia y apoyo en la toma de decisiones.</p>
+            </section>
+
+            <section id="main-functions-section" class="card">
+                <h2>Funciones Principales del Programa</h2>
+                <ol>
+                    <li>*Clasificación y organización de datos:* Estructurar la información en categorías claras y accesibles.</li>
+                    <li>*Almacenamiento seguro:* Implementar repositorios digitales y físicos que resguarden la información de manera ordenada y confiable.</li>
+                    <li>*Búsqueda y recuperación rápida:* Facilitar el acceso oportuno a documentos y registros a través de filtros y criterios de búsqueda.</li>
+                    <li>*Control de acceso y seguridad:* Definir niveles de permisos para garantizar la confidencialidad y protección de los datos.</li>
+                    <li>*Actualización y mantenimiento:* Permitir la modificación y actualización de registros, evitando duplicidades o pérdida de información.</li>
+                    <li>*Generación de reportes e informes:* Producir información procesada y resumida que apoye la toma de decisiones estratégicas.</li>
+                    <li>*Capacitación y soporte al usuario:* Brindar asistencia técnica y formación continua en el uso del sistema.</li>
+                </ol>
+            </section>
+
+            <section id="methodology-section" class="card">
+                <h2>Metodología de Desarrollo</h2>
+                <p>La metodología se desarrolla en seis fases: primero se realiza un diagnóstico de necesidades y flujos de información; luego se diseña el sistema de recolección, clasificación y almacenamiento de datos. Posteriormente, se implementan las herramientas tecnológicas y se capacita al personal en su uso. Después se ejecutan pruebas piloto para identificar errores y hacer ajustes. Finalmente, se establece un proceso de seguimiento y mejora continua que garantice la eficiencia, seguridad y sostenibilidad del sistema.</p>
+            </section>
+
+            <section id="tools-section" class="card">
+                <h2>Herramientas Utilizadas</h2>
+                <h3>Lenguajes de programación y diseño web</h3>
+                <ul>
+                    <li>*HTML5:* Para la estructura y organización del contenido del sistema.</li>
+                    <li>*CSS3:* Para la apariencia visual, estilos y diseño responsivo.</li>
+                    <li>*JavaScript:* Para la lógica de funcionamiento, validaciones, interactividad y conexión con el almacenamiento local.</li>
+                </ul>
+                <h3>Entorno de desarrollo</h3>
+                <ul>
+                    <li>*Visual Studio Code:* Editor de código principal para la construcción del programa.</li>
+                    <li>*Navegadores web (Google Chrome, Mozilla Firefox, Microsoft Edge):* Para ejecutar y probar el sistema.</li>
+                    <li>*Git y GitHub:* Para el control de versiones y respaldo del proyecto.</li>
+                    <li>*LocalStorage del navegador:* Para guardar y recuperar la información registrada por los usuarios.</li>
+                </ul>
+                <h3>Recursos de apoyo</h3>
+                <ul>
+                    <li>Manuales y guías de buenas prácticas en desarrollo web.</li>
+                    <li>Bibliotecas de íconos y tipografías libres para mejorar la interfaz.</li>
+                </ul>
+            </section>
+
+            <section id="annexes-section" class="card">
+                <h2>Anexos</h2>
+                <p>Finalmente, los anexos incluyen diagramas de flujo, formularios de registro, capturas del sistema, un cronograma de actividades, un manual de usuario y ejemplos de reportes administrativos.</p>
+            </section>
+
+            <section id="conclusions-section" class="card">
+                <h2>Conclusiones</h2>
+                <p>En conclusión, el proyecto demuestra que, mediante el uso de tecnologías web y buenas prácticas de gestión documental, es posible desarrollar una herramienta útil para los asistentes administrativos, que no solo facilita el trabajo diario, sino que también mejora la productividad y competitividad de la organización.</p>
+            </section>
+
+            <section id="report-chart-section" class="card">
+                <h2>Reporte por Categoría</h2>
+                <canvas id="categoryChart"></canvas>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="credits">
+            <h3>CRÉDITOS</h3>
+            <p>VALERIS CAUSIL BERRIO</p>
+            <p>INIS PATERNINA LÁZARO</p>
+            <p>SEBASTIÁN MÁRQUEZ ORTIZ</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
